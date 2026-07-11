@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="src/TransactionApp.Api/TransactionApp.Api.csproj" />
-  <Project Path="src/TransactionSystem.Api/TransactionSystem.Api.csproj" Id="2a513042-d6d0-4e17-8f6d-4304609d53ae" />
+  <Project Path="src/TransactionApp.Api/TransactionSystem.Api.csproj" />
+  <Project Path="src/TransactionSystem.Application/TransactionSystem.Application.csproj" />
   <Project Path="src/TransactionSystem.Domain/TransactionSystem.Domain.csproj" Id="475341f8-6593-4cad-832b-784264421a21" />
-  <Project Path="src/TransactionSystem.Entity/TransactionSystem.Entity.csproj" Id="19b8ef86-a8ee-4705-8f37-98b54e676df7" />
+  <Project Path="src/TransactionSystem.Infrastructure/TransactionSystem.Infrastructure.csproj" />
 </Solution>
