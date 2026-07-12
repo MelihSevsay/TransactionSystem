@@ -1,5 +1,5 @@
 using TransactionSystem.Infrastructure.Extensions;
-using TransactionSystem.Domain.Extensions;
+using TransactionSystem.Application.Extensions;
 using TransactionSystem.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,10 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure(builder.Configuration);
 
 // --- Domain Layer Services
-builder.Services.AddApplication(builder.Configuration);
+builder.Services.AddApplication();
 
 // --- Api Layer Services
-builder.Services.AddApi(builder.Configuration);
+builder.Services.AddApi();
 
 var app = builder.Build();
 

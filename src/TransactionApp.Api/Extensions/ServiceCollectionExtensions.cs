@@ -1,7 +1,7 @@
 ﻿namespace TransactionSystem.Api.Extensions;
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddApi(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApi(this IServiceCollection services)
     {
         // --- API / Swagger
         services.AddControllers();

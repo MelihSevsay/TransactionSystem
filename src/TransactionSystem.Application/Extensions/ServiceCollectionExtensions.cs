@@ -4,10 +4,10 @@ using TransactionSystem.Application.Interfaces;
 using TransactionSystem.Application.Mapping;
 using TransactionSystem.Application.Services;
 
-namespace TransactionSystem.Domain.Extensions;
+namespace TransactionSystem.Application.Extensions;
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         // --- Application services
         services.AddScoped<IUserService, UserService>();
