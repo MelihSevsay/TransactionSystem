@@ -24,10 +24,11 @@ public class UserManagement : UserBase, IHaveIdentifier<int>
 /// <summary>
 /// User Detail model
 /// </summary>
-public class User : UserBase, IHaveIdentifier<int>
+public class User : UserBase, IHaveIdentifier<int>, IHaveCreationDateTime
 {
     public int Id { get; set; }
     public string FullName { get; set; } = string.Empty;
+    public DateTime CreationDateTime { get; set; } = DateTime.Now;
 }
 
 /// <summary>

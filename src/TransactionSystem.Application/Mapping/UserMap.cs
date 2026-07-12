@@ -17,5 +17,8 @@ public class UserMap : MapBase<UserEntity, UserList, User, UserManagement>
         EntityToListMap
             .ForMember(x => x.FullName, opt => opt.MapFrom(s => s.FirstName + " " + s.LastName));
 
+        EntityToDetailsMap
+            .ForMember(x => x.FullName, opt => opt.MapFrom(s => s.FirstName + " " + s.LastName));
+
     }
 }

@@ -37,8 +37,8 @@ public class UsersController : ControllerBase
 
     /// <summary>Creates a new user.</summary>
     [HttpPost]
-    [ProducesResponseType(typeof(UserManagement), StatusCodes.Status201Created)]
-    public async Task<ActionResult<UserManagement>> Create(UserManagement dto, CancellationToken cancellationToken)
+    [ProducesResponseType(typeof(User), StatusCodes.Status201Created)]
+    public async Task<ActionResult<User>> Create(UserManagement dto, CancellationToken cancellationToken)
     {
         var created = await _userService.CreateAsync(dto, cancellationToken);
         return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
@@ -46,9 +46,9 @@ public class UsersController : ControllerBase
 
     /// <summary>Updates an existing user.</summary>
     [HttpPut("{id}")]
-    [ProducesResponseType(typeof(UserManagement), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<UserManagement>> Update(int id, UserManagement dto, CancellationToken cancellationToken)
+    public async Task<ActionResult<User>> Update(int id, UserManagement dto, CancellationToken cancellationToken)
     {
         var updated = await _userService.UpdateAsync(id, dto, cancellationToken);
         return Ok(updated);

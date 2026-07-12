@@ -3,4 +3,6 @@
   <Project Path="src/TransactionSystem.Application/TransactionSystem.Application.csproj" />
   <Project Path="src/TransactionSystem.Domain/TransactionSystem.Domain.csproj" Id="475341f8-6593-4cad-832b-784264421a21" />
   <Project Path="src/TransactionSystem.Infrastructure/TransactionSystem.Infrastructure.csproj" />
+  <Project Path="test/TransactionSystem.IntegrationTests/TransactionSystem.IntegrationTests.csproj" Id="805d3d0a-7677-48ed-8d6b-9d5c296109df" />
+  <Project Path="test/TransactionSystem.UnitTests/TransactionSystem.UnitTests.csproj" Id="3d262018-4d7b-4bb0-94eb-2ebee7812703" />
 </Solution>

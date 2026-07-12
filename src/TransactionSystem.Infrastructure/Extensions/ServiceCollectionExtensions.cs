@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TransactionSystem.Domain.Interfaces;
 
 namespace TransactionSystem.Infrastructure.Extensions;
+
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
