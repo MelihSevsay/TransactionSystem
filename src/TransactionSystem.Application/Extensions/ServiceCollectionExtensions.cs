@@ -11,6 +11,7 @@ public static class ServiceCollectionExtensions
     {
         // --- Application services
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<ITransactionService, TransactionService>();
 
         // --- AutoMapper
         services.AddAutoMapper(cfg => { }, typeof(UserMap).Assembly);

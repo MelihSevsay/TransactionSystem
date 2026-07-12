@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TransactionSystem.Domain.Interfaces;
+using TransactionSystem.Infrastructure.Repository;
 
 namespace TransactionSystem.Infrastructure.Extensions;
 
@@ -15,6 +16,7 @@ public static class ServiceCollectionExtensions
 
         // --- Repositories
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<ITransactionRepository, TransactionRepository>();
 
         return services;
     }

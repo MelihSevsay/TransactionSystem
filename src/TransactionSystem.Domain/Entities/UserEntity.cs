@@ -1,4 +1,5 @@
-﻿using TransactionSystem.Domain.Interfaces;
+﻿using System.Transactions;
+using TransactionSystem.Domain.Interfaces;
 
 namespace TransactionSystem.Domain.Entities;
 
@@ -14,5 +15,7 @@ public class UserEntity : IHaveIdentifier<int>, IHaveCreationDateTime
 
     // TODO: Use DateTimeOffset to stored with timezone offset for international consistency.
     public DateTime CreationDateTime { get; set; } = DateTime.UtcNow;
+
+    public ICollection<TransactionEntity> Transactions { get; set; } = new List<TransactionEntity>();
 
 }
