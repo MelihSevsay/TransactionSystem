@@ -15,6 +15,11 @@ builder.Services.AddApi();
 
 var app = builder.Build();
 
+if (app.Environment.IsDevelopment())
+{
+    await app.ApplyMigrationsAsync();
+}
+
 // --- Middleware Pipeline
 app.UseCustomExceptionHandler();
 app.UseSwaggerDocumentation();
