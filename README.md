@@ -30,3 +30,22 @@ git clone <repo-url>
 cd TransactionSystem
 dotnet restore
 ```
+
+## Database Connection
+
+The `appsettings.json` / `appsettings.Development.json` files contain **two different connection strings**. Depending on your setup, you can choose which one to use as `DefaultConnection`.
+
+```json
+
+"DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=TransactionSystemDb;Trusted_Connection=True;TrustServerCertificate=True;"
+ or
+"DefaultConnection": "Server=.\\SQLEXPRESS;Database=TransactionSystemDb;User Id=sa;Password=YOUR_PASSWORD;TrustServerCertificate=True;"
+
+```
+
+- **LocalDb**: Requires no additional setup — comes bundled with Visual Studio. Recommended for quick start and local development.
+- **SqlServer**: For those who want to use their own SQL Server / SQL Server Express instance. You'll need to update the `sa` username and password to match your environment.
+
+## Tests
+
+Integration tests run against an **in-memory SQLite** database instead of LocalDB or SQL Server.
