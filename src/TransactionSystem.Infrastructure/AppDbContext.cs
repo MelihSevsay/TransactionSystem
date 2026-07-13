@@ -10,6 +10,7 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<UserEntity> Users => Set<UserEntity>();
+    public DbSet<TransactionEntity> Transactions => Set<TransactionEntity>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

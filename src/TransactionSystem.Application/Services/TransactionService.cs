@@ -19,7 +19,7 @@ public class TransactionService : ITransactionService
     private readonly TransactionTypeTotalCalculator _typeTotalCalculator;
     private readonly IUserRepository _userRepository;
 
-    public TransactionService(ITransactionRepository transactionRepository, IUserRepository userRepository, IMapper mapper)
+    public TransactionService(ITransactionRepository transactionRepository, IMapper mapper, IUserRepository userRepository)
     {
         _transactionRepository = transactionRepository;
         _mapper = mapper;
